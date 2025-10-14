@@ -1,0 +1,1088 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dementia Misinformation Detection System</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #4361ee;
+            --secondary: #3a0ca3;
+            --success: #4cc9f0;
+            --danger: #f72585;
+            --warning: #fca311;
+            --light: #f8f9fa;
+            --dark: #212529;
+            --gray: #6c757d;
+            --semantic-color: #4361ee;
+            --keyword-color: #f72585;
+            --hybrid-color: #4cc9f0;
+            --web-research-color: #10b981;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: var(--primary);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        
+        .header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        
+        .main-content {
+            padding: 30px;
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 30px;
+        }
+        
+        @media (max-width: 1024px) {
+            .main-content {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .input-section {
+            background: var(--light);
+            padding: 25px;
+            border-radius: 15px;
+            height: fit-content;
+        }
+        
+        .results-section {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            border: 2px solid var(--light);
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        textarea {
+            width: 100%;
+            height: 120px;
+            padding: 15px;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            font-family: inherit;
+            font-size: 1rem;
+            resize: vertical;
+            transition: border-color 0.3s;
+        }
+        
+        textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+        }
+        
+        .btn {
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 10px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+        }
+        
+        .btn:disabled {
+            background: var(--gray);
+            cursor: not-allowed;
+        }
+        
+        .btn-quick {
+            background: var(--primary);
+        }
+        
+        .btn-quick:hover {
+            background: var(--secondary);
+        }
+        
+        .btn-research {
+            background: var(--web-research-color);
+        }
+        
+        .btn-research:hover {
+            background: #0d9669;
+        }
+        
+        .btn-performance {
+            background: var(--warning);
+        }
+        
+        .btn-performance:hover {
+            background: #e69500;
+        }
+        
+        .result-card {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            border-left: 5px solid var(--primary);
+        }
+        
+        .result-misinformation {
+            border-left-color: var(--danger);
+        }
+        
+        .result-factual {
+            border-left-color: var(--success);
+        }
+        
+        .result-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        
+        .result-badge {
+            padding: 8px 15px;
+            border-radius: 25px;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+        
+        .badge-misinformation {
+            background: #ffe6e6;
+            color: var(--danger);
+        }
+        
+        .badge-factual {
+            background: #e6f7ff;
+            color: var(--success);
+        }
+        
+        .confidence-bar {
+            height: 8px;
+            background: #eee;
+            border-radius: 4px;
+            overflow: hidden;
+            margin: 10px 0;
+        }
+        
+        .confidence-fill {
+            height: 100%;
+            border-radius: 4px;
+            transition: width 0.5s;
+        }
+        
+        .rag-results {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 20px;
+            margin-top: 25px;
+        }
+        
+        @media (max-width: 768px) {
+            .rag-results {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .rag-section {
+            background: var(--light);
+            border-radius: 12px;
+            padding: 20px;
+            border-top: 4px solid;
+        }
+        
+        .rag-section.semantic {
+            border-top-color: var(--semantic-color);
+        }
+        
+        .rag-section.keyword {
+            border-top-color: var(--keyword-color);
+        }
+        
+        .rag-section.hybrid {
+            border-top-color: var(--hybrid-color);
+        }
+        
+        .rag-section.web-research {
+            border-top-color: var(--web-research-color);
+            grid-column: 1 / -1;
+            margin-top: 20px;
+        }
+        
+        .rag-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid rgba(0,0,0,0.1);
+        }
+        
+        .rag-title {
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+        
+        .rag-badge {
+            padding: 4px 8px;
+            border-radius: 6px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            color: white;
+        }
+        
+        .badge-semantic { background: var(--semantic-color); }
+        .badge-keyword { background: var(--keyword-color); }
+        .badge-hybrid { background: var(--hybrid-color); }
+        .badge-web-research { background: var(--web-research-color); }
+        
+        .evidence-list {
+            max-height: 300px;
+            overflow-y: auto;
+        }
+        
+        .evidence-item {
+            background: white;
+            padding: 12px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            border-left: 3px solid;
+            font-size: 0.9rem;
+        }
+        
+        .evidence-item.semantic { border-left-color: var(--semantic-color); }
+        .evidence-item.keyword { border-left-color: var(--keyword-color); }
+        .evidence-item.hybrid { border-left-color: var(--hybrid-color); }
+        .evidence-item.web-research { border-left-color: var(--web-research-color); }
+        
+        .evidence-source {
+            font-size: 0.75rem;
+            color: var(--gray);
+            margin-top: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .stat-card {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+        }
+        
+        .stat-value {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--primary);
+        }
+        
+        .stat-label {
+            font-size: 0.8rem;
+            color: var(--gray);
+        }
+        
+        .loading {
+            display: none;
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .spinner {
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid var(--primary);
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .alert {
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            display: none;
+        }
+        
+        .alert-error {
+            background: #ffe6e6;
+            color: var(--danger);
+            border-left: 4px solid var(--danger);
+        }
+        
+        .evidence-type {
+            font-size: 0.7rem;
+            padding: 3px 8px;
+            border-radius: 12px;
+            background: #e9ecef;
+        }
+        
+        .type-scientific { background: #d1e7dd; color: #0f5132; }
+        .type-educational { background: #cfe2ff; color: #084298; }
+        .type-prevention { background: #fff3cd; color: #664d03; }
+        .type-treatment { background: #d8f2ff; color: #055160; }
+        .type-warning { background: #f8d7da; color: #842029; }
+        .type-research { background: #e0c3f7; color: #4a1c7a; }
+        .type-guidance { background: #c7f5d9; color: #166534; }
+        .type-scientific_research { background: #d1e7dd; color: #0f5132; }
+        .type-medical_guideline { background: #cfe2ff; color: #084298; }
+        .type-current_news { background: #fff3cd; color: #664d03; }
+        .type-analysis_summary { background: #e0c3f7; color: #4a1c7a; }
+        
+        .rag-stats {
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+            font-size: 0.8rem;
+        }
+        
+        .rag-stat {
+            background: white;
+            padding: 4px 8px;
+            border-radius: 6px;
+            border: 1px solid #ddd;
+        }
+        
+        .source-link {
+            color: var(--web-research-color);
+            text-decoration: none;
+            font-size: 0.7rem;
+        }
+        
+        .source-link:hover {
+            text-decoration: underline;
+        }
+        
+        .reliability-badge {
+            font-size: 0.7rem;
+            padding: 2px 6px;
+            border-radius: 8px;
+            background: #f0f9ff;
+            color: #0369a1;
+            margin-left: 8px;
+        }
+        
+        .button-group {
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
+            flex-wrap: wrap;
+        }
+        
+        /* Performance Metrics Styles */
+        .performance-section {
+            background: #f8f9fa;
+            border-radius: 15px;
+            padding: 25px;
+            margin-top: 20px;
+            border: 2px solid #e9ecef;
+        }
+        
+        .performance-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+        
+        .performance-card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+            border-top: 4px solid;
+        }
+        
+        .performance-card.semantic { border-top-color: var(--semantic-color); }
+        .performance-card.keyword { border-top-color: var(--keyword-color); }
+        .performance-card.hybrid { border-top-color: var(--hybrid-color); }
+        
+        .performance-value {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin: 10px 0;
+        }
+        
+        .performance-label {
+            font-size: 0.9rem;
+            color: var(--gray);
+            font-weight: 500;
+        }
+        
+        .performance-subtext {
+            font-size: 0.7rem;
+            color: #6c757d;
+            margin-top: 5px;
+        }
+        
+        .comparison-section {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 20px;
+            border-left: 4px solid var(--warning);
+        }
+        
+        .comparison-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        
+        .comparison-item:last-child {
+            border-bottom: none;
+        }
+        
+        .winner-badge {
+            background: #d1fae5;
+            color: #065f46;
+            padding: 4px 8px;
+            border-radius: 12px;
+            font-size: 0.7rem;
+            font-weight: 600;
+        }
+        
+        .score-bar {
+            height: 8px;
+            background: #e5e7eb;
+            border-radius: 4px;
+            margin: 5px 0;
+            overflow: hidden;
+        }
+        
+        .score-fill {
+            height: 100%;
+            border-radius: 4px;
+            transition: width 0.5s ease-in-out;
+        }
+        
+        .score-fill.semantic { background: var(--semantic-color); }
+        .score-fill.keyword { background: var(--keyword-color); }
+        .score-fill.hybrid { background: var(--hybrid-color); }
+        
+        .metrics-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            font-size: 0.85rem;
+        }
+        
+        .metrics-table th,
+        .metrics-table td {
+            padding: 10px;
+            text-align: center;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        
+        .metrics-table th {
+            background: #f8f9fa;
+            font-weight: 600;
+            color: var(--dark);
+        }
+        
+        .metrics-table tr:hover {
+            background: #f8f9fa;
+        }
+        
+        .best-metric {
+            background: #d1fae5 !important;
+            font-weight: 600;
+        }
+        
+        .performance-score {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-brain"></i> Dementia Misinformation Detection</h1>
+            <p>AI-powered system with comprehensive RAG performance analytics</p>
+        </div>
+        
+        <div class="main-content">
+            <div class="input-section">
+                <h2><i class="fas fa-search"></i> Analyze a Claim</h2>
+                <div class="alert alert-error" id="errorAlert"></div>
+                
+                <div class="form-group">
+                    <textarea id="claimInput" placeholder="Enter a claim about dementia to analyze (e.g., 'Drinking bleach can cure dementia')"></textarea>
+                </div>
+                
+                <div class="button-group">
+                    <button class="btn btn-quick" onclick="analyzeClaim()">
+                        <i class="fas fa-search"></i> Quick Analyze
+                    </button>
+                    <button class="btn btn-research" onclick="analyzeWithResearch()">
+                        <i class="fas fa-globe"></i> With Web Research
+                    </button>
+                    <button class="btn btn-performance" onclick="showPerformanceMetrics()">
+                        <i class="fas fa-chart-line"></i> Performance Metrics
+                    </button>
+                </div>
+                
+                <div class="stats-grid" id="statsGrid">
+                    <div class="stat-card">
+                        <div class="stat-value">0</div>
+                        <div class="stat-label">Total Analyses</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value">0%</div>
+                        <div class="stat-label">Misinformation Rate</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value">0%</div>
+                        <div class="stat-label">Avg Confidence</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value">0s</div>
+                        <div class="stat-label">Avg Latency</div>
+                    </div>
+                </div>
+                
+                <!-- Performance Metrics Section -->
+                <div class="performance-section" id="performanceSection" style="display: none;">
+                    <h3><i class="fas fa-tachometer-alt"></i> RAG Performance Metrics</h3>
+                    <div id="performanceMetrics">
+                        <div style="text-align: center; padding: 20px; color: #666;">
+                            <i class="fas fa-chart-bar" style="font-size: 3rem; margin-bottom: 10px;"></i>
+                            <p>Performance data will appear here after analyzing claims</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="results-section">
+                <h2><i class="fas fa-chart-bar"></i> Analysis Results</h2>
+                
+                <div class="loading" id="loading">
+                    <div class="spinner"></div>
+                    <p>Analyzing claim with 3 RAG engines...</p>
+                </div>
+                
+                <div id="resultsContainer">
+                    <div class="result-card" style="text-align: center; opacity: 0.7;">
+                        <i class="fas fa-info-circle" style="font-size: 3rem; color: #6c757d; margin-bottom: 15px;"></i>
+                        <h3>No analysis yet</h3>
+                        <p>Enter a claim to see analysis results from all RAG engines</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let currentRagPerformance = null;
+
+        function analyzeClaim() {
+            const claim = document.getElementById('claimInput').value.trim();
+            if (!claim) {
+                showError('Please enter a claim to analyze');
+                return;
+            }
+            
+            const loading = document.getElementById('loading');
+            const resultsContainer = document.getElementById('resultsContainer');
+            const errorAlert = document.getElementById('errorAlert');
+            
+            // Show loading, hide error
+            loading.style.display = 'block';
+            resultsContainer.innerHTML = '';
+            errorAlert.style.display = 'none';
+            
+            fetch('/analyze', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ claim: claim })
+            })
+            .then(response => response.json())
+            .then(data => {
+                loading.style.display = 'none';
+                
+                if (data.error) {
+                    showError(data.error);
+                    return;
+                }
+                
+                displayResults(data);
+                updateStats(data.statistics);
+                
+                // Store RAG performance data
+                if (data.rag_performance) {
+                    currentRagPerformance = data.rag_performance;
+                }
+            })
+            .catch(error => {
+                loading.style.display = 'none';
+                showError('An error occurred: ' + error.message);
+            });
+        }
+        
+        function analyzeWithResearch() {
+            const claim = document.getElementById('claimInput').value.trim();
+            if (!claim) {
+                showError('Please enter a claim to analyze');
+                return;
+            }
+            
+            const loading = document.getElementById('loading');
+            const resultsContainer = document.getElementById('resultsContainer');
+            const errorAlert = document.getElementById('errorAlert');
+            
+            loading.style.display = 'block';
+            resultsContainer.innerHTML = '';
+            errorAlert.style.display = 'none';
+            
+            fetch('/analyze-with-research', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ claim: claim })
+            })
+            .then(response => response.json())
+            .then(data => {
+                loading.style.display = 'none';
+                
+                if (data.error) {
+                    showError(data.error);
+                    return;
+                }
+                
+                displayResultsWithResearch(data);
+                updateStats(data.statistics);
+                
+                // Store RAG performance data
+                if (data.rag_performance) {
+                    currentRagPerformance = data.rag_performance;
+                }
+            })
+            .catch(error => {
+                loading.style.display = 'none';
+                showError('An error occurred: ' + error.message);
+            });
+        }
+        
+        function showPerformanceMetrics() {
+            // Always fetch fresh data for performance metrics
+            fetch('/rag-metrics')
+                .then(response => response.json())
+                .then(data => {
+                    currentRagPerformance = data;
+                    displayPerformanceMetrics(data);
+                })
+                .catch(error => {
+                    showError('Error loading performance metrics: ' + error.message);
+                });
+        }
+        
+        function displayPerformanceMetrics(performanceData) {
+            const performanceSection = document.getElementById('performanceSection');
+            const performanceMetrics = document.getElementById('performanceMetrics');
+            
+            performanceSection.style.display = 'block';
+            
+            if (!performanceData || Object.keys(performanceData).length === 0) {
+                performanceMetrics.innerHTML = `
+                    <div style="text-align: center; padding: 20px; color: #666;">
+                        <i class="fas fa-chart-bar" style="font-size: 3rem; margin-bottom: 10px;"></i>
+                        <p>No performance data available yet. Analyze some claims first.</p>
+                    </div>
+                `;
+                return;
+            }
+            
+            let metricsHTML = '';
+            
+            // Performance Cards
+            metricsHTML += `
+                <div class="performance-grid">
+            `;
+            
+            const ragTypes = ['semantic', 'keyword', 'hybrid'];
+            
+            ragTypes.forEach(ragType => {
+                if (performanceData[ragType]) {
+                    const metrics = performanceData[ragType];
+                    metricsHTML += `
+                        <div class="performance-card ${ragType}">
+                            <div class="performance-label">${ragType.toUpperCase()} RAG</div>
+                            <div class="performance-value">${metrics.performance_score}</div>
+                            <div class="performance-subtext">Overall Score</div>
+                            <div class="score-bar">
+                                <div class="score-fill ${ragType}" style="width: ${metrics.performance_score}%"></div>
+                            </div>
+                            <div style="margin-top: 10px; font-size: 0.8rem;">
+                                <div>Success: ${metrics.query_success_rate_percent}%</div>
+                                <div>Speed: ${metrics.avg_processing_time_ms}ms</div>
+                                <div>Evidence: ${metrics.avg_evidence_per_query}</div>
+                            </div>
+                        </div>
+                    `;
+                }
+            });
+            
+            metricsHTML += `</div>`;
+            
+            // Detailed Metrics Table
+            metricsHTML += `
+                <div style="margin-top: 20px;">
+                    <h4><i class="fas fa-table"></i> Detailed Metrics</h4>
+                    <table class="metrics-table">
+                        <thead>
+                            <tr>
+                                <th>Metric</th>
+                                <th>Semantic RAG</th>
+                                <th>Keyword RAG</th>
+                                <th>Hybrid RAG</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+            `;
+            
+            // Define metrics to display
+            const metricDefinitions = [
+                { key: 'total_queries', label: 'Total Queries', format: (v) => v },
+                { key: 'avg_evidence_per_query', label: 'Avg Evidence/Query', format: (v) => v.toFixed(2) },
+                { key: 'query_success_rate_percent', label: 'Success Rate %', format: (v) => v.toFixed(1) + '%' },
+                { key: 'avg_processing_time_ms', label: 'Avg Time (ms)', format: (v) => v },
+                { key: 'evidence_relevance_score', label: 'Relevance Score', format: (v) => v.toFixed(3) },
+                { key: 'performance_score', label: 'Performance Score', format: (v) => v }
+            ];
+            
+            metricDefinitions.forEach(metric => {
+                metricsHTML += `<tr><td>${metric.label}</td>`;
+                
+                ragTypes.forEach(ragType => {
+                    if (performanceData[ragType] && performanceData[ragType][metric.key] !== undefined) {
+                        const value = performanceData[ragType][metric.key];
+                        const formattedValue = metric.format(value);
+                        
+                        // Highlight best metric (for numeric metrics where higher is better)
+                        let isBest = false;
+                        if (metric.key !== 'avg_processing_time_ms') {
+                            const values = ragTypes.map(rt => performanceData[rt] ? performanceData[rt][metric.key] : -Infinity);
+                            const maxValue = Math.max(...values);
+                            isBest = value === maxValue && value > 0;
+                        } else {
+                            // For processing time, lower is better
+                            const values = ragTypes.map(rt => performanceData[rt] ? performanceData[rt][metric.key] : Infinity);
+                            const minValue = Math.min(...values);
+                            isBest = value === minValue && value < Infinity;
+                        }
+                        
+                        metricsHTML += `<td class="${isBest ? 'best-metric' : ''}">${formattedValue}</td>`;
+                    } else {
+                        metricsHTML += `<td>-</td>`;
+                    }
+                });
+                
+                metricsHTML += `</tr>`;
+            });
+            
+            metricsHTML += `
+                        </tbody>
+                    </table>
+                </div>
+            `;
+            
+            performanceMetrics.innerHTML = metricsHTML;
+        }
+        
+        function displayResults(data) {
+            const resultsContainer = document.getElementById('resultsContainer');
+            const isMisinformation = data.classification === 'MISINFORMATION';
+            
+            const ragResults = data.rag_results || {};
+            
+            const resultHTML = `
+                <div class="result-card ${isMisinformation ? 'result-misinformation' : 'result-factual'}">
+                    <div class="result-header">
+                        <h3>Claim Analysis</h3>
+                        <span class="result-badge ${isMisinformation ? 'badge-misinformation' : 'badge-factual'}">
+                            <i class="fas ${isMisinformation ? 'fa-times-circle' : 'fa-check-circle'}"></i>
+                            ${data.classification}
+                        </span>
+                    </div>
+                    
+                    <p><strong>Claim:</strong> "${data.claim}"</p>
+                    
+                    <div style="margin: 15px 0;">
+                        <div style="display: flex; justify-content: space-between;">
+                            <span>Confidence: <strong>${(data.confidence * 100).toFixed(1)}%</strong></span>
+                            <span>Processing time: <strong>${data.processing_time.toFixed(3)}s</strong></span>
+                        </div>
+                        <div class="confidence-bar">
+                            <div class="confidence-fill" style="width: ${data.confidence * 100}%; background: ${isMisinformation ? '#f72585' : '#4cc9f0'};"></div>
+                        </div>
+                    </div>
+                    
+                    ${data.rag_performance ? `
+                        <div style="background: #f0f9ff; padding: 15px; border-radius: 10px; margin: 15px 0;">
+                            <h4><i class="fas fa-chart-line"></i> RAG Performance Snapshot</h4>
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 10px; margin-top: 10px;">
+                                ${Object.entries(data.rag_performance).map(([ragType, metrics]) => `
+                                    <div class="stat-card">
+                                        <div class="stat-value">${metrics.queries}</div>
+                                        <div class="stat-label">${ragType} Queries</div>
+                                    </div>
+                                `).join('')}
+                            </div>
+                        </div>
+                    ` : ''}
+                    
+                    <h4><i class="fas fa-cogs"></i> Multi-RAG Evidence Retrieval:</h4>
+                    <div class="rag-results">
+                        ${renderRAGSection('semantic', 'Semantic RAG', 'Uses semantic similarity search', ragResults.semantic || [])}
+                        ${renderRAGSection('keyword', 'Keyword RAG', 'Uses keyword matching and patterns', ragResults.keyword || [])}
+                        ${renderRAGSection('hybrid', 'Hybrid RAG', 'Combines multiple approaches', ragResults.hybrid || [])}
+                    </div>
+                </div>
+            `;
+            
+            resultsContainer.innerHTML = resultHTML;
+        }
+        
+        function displayResultsWithResearch(data) {
+            const resultsContainer = document.getElementById('resultsContainer');
+            const isMisinformation = data.classification === 'MISINFORMATION';
+            
+            const ragResults = data.rag_results || {};
+            const webResearch = ragResults.web_research || [];
+            const webSummary = data.web_research_summary || {};
+            
+            const resultHTML = `
+                <div class="result-card ${isMisinformation ? 'result-misinformation' : 'result-factual'}">
+                    <div class="result-header">
+                        <h3>Comprehensive Claim Analysis</h3>
+                        <span class="result-badge ${isMisinformation ? 'badge-misinformation' : 'badge-factual'}">
+                            <i class="fas ${isMisinformation ? 'fa-times-circle' : 'fa-check-circle'}"></i>
+                            ${data.classification}
+                        </span>
+                    </div>
+                    
+                    <p><strong>Claim:</strong> "${data.claim}"</p>
+                    
+                    <div style="margin: 15px 0;">
+                        <div style="display: flex; justify-content: space-between;">
+                            <span>Confidence: <strong>${(data.confidence * 100).toFixed(1)}%</strong></span>
+                            <span>Processing time: <strong>${data.processing_time.toFixed(3)}s</strong></span>
+                        </div>
+                        <div class="confidence-bar">
+                            <div class="confidence-fill" style="width: ${data.confidence * 100}%; background: ${isMisinformation ? '#f72585' : '#4cc9f0'};"></div>
+                        </div>
+                    </div>
+                    
+                    ${data.rag_performance ? `
+                        <div style="background: #f0f9ff; padding: 15px; border-radius: 10px; margin: 15px 0;">
+                            <h4><i class="fas fa-chart-line"></i> RAG Performance Snapshot</h4>
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 10px; margin-top: 10px;">
+                                ${Object.entries(data.rag_performance).map(([ragType, metrics]) => `
+                                    <div class="stat-card">
+                                        <div class="stat-value">${metrics.avg_evidence}</div>
+                                        <div class="stat-label">${ragType} Evidence</div>
+                                    </div>
+                                `).join('')}
+                            </div>
+                        </div>
+                    ` : ''}
+                    
+                    ${webSummary.total_web_sources ? `
+                        <div style="background: #f0f9ff; padding: 15px; border-radius: 10px; margin: 15px 0;">
+                            <h4><i class="fas fa-globe-americas"></i> Web Research Summary</h4>
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; margin-top: 10px;">
+                                <div class="stat-card">
+                                    <div class="stat-value">${webSummary.total_web_sources}</div>
+                                    <div class="stat-label">Web Sources</div>
+                                </div>
+                                <div class="stat-card">
+                                    <div class="stat-value">${webSummary.unique_research_sources}</div>
+                                    <div class="stat-label">Unique Sources</div>
+                                </div>
+                                <div class="stat-card">
+                                    <div class="stat-value">${(webSummary.average_reliability * 100).toFixed(0)}%</div>
+                                    <div class="stat-label">Avg Reliability</div>
+                                </div>
+                            </div>
+                        </div>
+                    ` : ''}
+                    
+                    <h4><i class="fas fa-cogs"></i> Multi-Source Evidence Retrieval:</h4>
+                    <div class="rag-results">
+                        ${renderRAGSection('semantic', 'Semantic RAG', 'Uses semantic similarity search', ragResults.semantic || [])}
+                        ${renderRAGSection('keyword', 'Keyword RAG', 'Uses keyword matching and patterns', ragResults.keyword || [])}
+                        ${renderRAGSection('hybrid', 'Hybrid RAG', 'Combines multiple approaches', ragResults.hybrid || [])}
+                    </div>
+                    
+                    ${webResearch.length > 0 ? `
+                        <div class="rag-section web-research">
+                            <div class="rag-header">
+                                <div>
+                                    <div class="rag-title">Web Research</div>
+                                    <div style="font-size: 0.8rem; color: #666;">Live internet research from multiple sources</div>
+                                </div>
+                                <span class="rag-badge badge-web-research">${webResearch.length}</span>
+                            </div>
+                            
+                            <div class="rag-stats">
+                                <div class="rag-stat">Sources: ${new Set(webResearch.map(e => e.source)).size}</div>
+                                <div class="rag-stat">Avg Reliability: ${(webResearch.reduce((acc, e) => acc + (e.reliability || 0.5), 0) / webResearch.length * 100).toFixed(1)}%</div>
+                            </div>
+                            
+                            <div class="evidence-list">
+                                ${webResearch.map((evidence, index) => `
+                                    <div class="evidence-item web-research">
+                                        <div>${evidence.text}</div>
+                                        <div class="evidence-source">
+                                            <span>
+                                                ${evidence.source}
+                                                <span class="evidence-type type-${evidence.type}">${evidence.type}</span>
+                                                ${evidence.reliability ? `<span class="reliability-badge">${(evidence.reliability * 100).toFixed(0)}% reliable</span>` : ''}
+                                            </span>
+                                            ${evidence.link ? `<a href="${evidence.link}" target="_blank" class="source-link">View Source</a>` : ''}
+                                        </div>
+                                    </div>
+                                `).join('')}
+                            </div>
+                        </div>
+                    ` : ''}
+                </div>
+            `;
+            
+            resultsContainer.innerHTML = resultHTML;
+        }
+        
+        function renderRAGSection(type, title, description, evidence) {
+            const ragColors = {
+                semantic: { badge: 'badge-semantic', section: 'semantic', item: 'semantic' },
+                keyword: { badge: 'badge-keyword', section: 'keyword', item: 'keyword' },
+                hybrid: { badge: 'badge-hybrid', section: 'hybrid', item: 'hybrid' }
+            };
+            
+            const colors = ragColors[type];
+            
+            return `
+                <div class="rag-section ${colors.section}">
+                    <div class="rag-header">
+                        <div>
+                            <div class="rag-title">${title}</div>
+                            <div style="font-size: 0.8rem; color: #666;">${description}</div>
+                        </div>
+                        <span class="rag-badge ${colors.badge}">${evidence.length}</span>
+                    </div>
+                    
+                    <div class="rag-stats">
+                        <div class="rag-stat">Sources: ${new Set(evidence.map(e => e.source)).size}</div>
+                        <div class="rag-stat">Types: ${new Set(evidence.map(e => e.type)).size}</div>
+                    </div>
+                    
+                    <div class="evidence-list">
+                        ${evidence.length > 0 ? 
+                            evidence.map((evidenceItem, index) => `
+                                <div class="evidence-item ${colors.item}">
+                                    <div>${evidenceItem.text}</div>
+                                    <div class="evidence-source">
+                                        <span>${evidenceItem.source}</span>
+                                        <span class="evidence-type type-${evidenceItem.type}">${evidenceItem.type}</span>
+                                    </div>
+                                </div>
+                            `).join('') 
+                            : 
+                            '<div style="text-align: center; padding: 20px; color: #666; font-style: italic;">No evidence found</div>'
+                        }
+                    </div>
+                </div>
+            `;
+        }
+        
+        function updateStats(stats) {
+            document.querySelectorAll('.stat-card')[0].querySelector('.stat-value').textContent = stats.total_predictions;
+            document.querySelectorAll('.stat-card')[1].querySelector('.stat-value').textContent = (stats.misinformation_rate * 100).toFixed(1) + '%';
+            document.querySelectorAll('.stat-card')[2].querySelector('.stat-value').textContent = (stats.avg_confidence * 100).toFixed(1) + '%';
+            document.querySelectorAll('.stat-card')[3].querySelector('.stat-value').textContent = stats.avg_latency.toFixed(3) + 's';
+        }
+        
+        function showError(message) {
+            const errorAlert = document.getElementById('errorAlert');
+            errorAlert.textContent = message;
+            errorAlert.style.display = 'block';
+        }
+        
+        // Load initial stats
+        fetch('/stats')
+            .then(response => response.json())
+            .then(stats => updateStats(stats))
+            .catch(error => console.error('Error loading stats:', error));
+        
+        // Allow pressing Enter to submit
+        document.getElementById('claimInput').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter' && !e.shiftKey) {
+                e.preventDefault();
+                analyzeClaim();
+            }
+        });
+    </script>
+</body>
+</html>
