@@ -1,0 +1,3 @@
+setx PINECONE_API_KEY "<pcsk_4UUAru_J8pmSx6oEM1SzNEy5bJ6NmTxYMSgzWgzPUPWgAVuFcVzE7mGg4uoqQAmf57eVmP>"
+setx PINECONE_ENV "us-east1-gcp"   # change to the environment you use; your screenshot shows us-east-1 (Pinecone name may differ)
+setx PINECONE_INDEX "dementia-pdf-kb-384"

@@ -1,0 +1,521 @@
+id,claim,label,source
+1,Early diagnosis of dementia allows better treatment planning.,True,PubMed
+2,Dementia risk increases with age.,True,WHO
+3,Dementia risk increases with age.,True,WHO
+4,Social interaction reduces the likelihood of dementia-related decline.,True,Alzheimer’s Association
+5,Managing diabetes lowers the risk of developing dementia.,True,PubMed
+6,Managing diabetes lowers the risk of developing dementia.,True,PubMed
+7,Eating a balanced diet and managing blood pressure can reduce dementia risk.,True,WHO
+8,Early diagnosis of dementia allows better treatment planning.,True,NIH
+9,Listening to music can improve the mood and behavior of people with dementia.,True,CDC
+10,Eating a balanced diet and managing blood pressure can reduce dementia risk.,True,WHO
+11,Listening to music can improve the mood and behavior of people with dementia.,True,CDC
+12,Cognitive training and memory exercises can help slow dementia progression.,True,CDC
+13,Early diagnosis of dementia allows better treatment planning.,True,PubMed
+14,Managing diabetes lowers the risk of developing dementia.,True,PubMed
+15,Early diagnosis of dementia allows better treatment planning.,True,NIH
+16,Dementia risk increases with age.,True,CDC
+17,"Alzheimer's disease currently has no cure, but treatments exist to slow progression.",True,CDC
+18,Social interaction reduces the likelihood of dementia-related decline.,True,NIH
+19,Sleep quality is linked to brain health and dementia risk.,True,NIH
+20,"Alzheimer's disease currently has no cure, but treatments exist to slow progression.",True,Alzheimer’s Association
+21,Dementia risk increases with age.,True,NIH
+22,Early diagnosis of dementia allows better treatment planning.,True,WHO
+23,Listening to music can improve the mood and behavior of people with dementia.,True,PubMed
+24,Early diagnosis of dementia allows better treatment planning.,True,CDC
+25,Cognitive training and memory exercises can help slow dementia progression.,True,CDC
+26,Listening to music can improve the mood and behavior of people with dementia.,True,NIH
+27,Social interaction reduces the likelihood of dementia-related decline.,True,WHO
+28,Sleep quality is linked to brain health and dementia risk.,True,NIH
+29,Dementia risk increases with age.,True,WHO
+30,Dementia risk increases with age.,True,CDC
+31,"Alzheimer's disease currently has no cure, but treatments exist to slow progression.",True,Alzheimer’s Association
+32,Regular physical activity helps reduce the risk of dementia.,True,CDC
+33,Sleep quality is linked to brain health and dementia risk.,True,PubMed
+34,Social interaction reduces the likelihood of dementia-related decline.,True,NIH
+35,Listening to music can improve the mood and behavior of people with dementia.,True,NIH
+36,Regular physical activity helps reduce the risk of dementia.,True,CDC
+37,Managing diabetes lowers the risk of developing dementia.,True,NIH
+38,Dementia risk increases with age.,True,Alzheimer’s Association
+39,Cognitive training and memory exercises can help slow dementia progression.,True,Alzheimer’s Association
+40,Eating a balanced diet and managing blood pressure can reduce dementia risk.,True,PubMed
+41,Dementia risk increases with age.,True,PubMed
+42,"Alzheimer's disease currently has no cure, but treatments exist to slow progression.",True,WHO
+43,Sleep quality is linked to brain health and dementia risk.,True,PubMed
+44,Managing diabetes lowers the risk of developing dementia.,True,CDC
+45,Early diagnosis of dementia allows better treatment planning.,True,PubMed
+46,Regular physical activity helps reduce the risk of dementia.,True,PubMed
+47,Cognitive training and memory exercises can help slow dementia progression.,True,PubMed
+48,Regular physical activity helps reduce the risk of dementia.,True,PubMed
+49,Cognitive training and memory exercises can help slow dementia progression.,True,WHO
+50,Regular physical activity helps reduce the risk of dementia.,True,Alzheimer’s Association
+51,Managing diabetes lowers the risk of developing dementia.,True,WHO
+52,Early diagnosis of dementia allows better treatment planning.,True,Alzheimer’s Association
+53,Early diagnosis of dementia allows better treatment planning.,True,Alzheimer’s Association
+54,Cognitive training and memory exercises can help slow dementia progression.,True,PubMed
+55,Listening to music can improve the mood and behavior of people with dementia.,True,PubMed
+56,"Alzheimer's disease currently has no cure, but treatments exist to slow progression.",True,PubMed
+57,Dementia risk increases with age.,True,Alzheimer’s Association
+58,Eating a balanced diet and managing blood pressure can reduce dementia risk.,True,WHO
+59,Managing diabetes lowers the risk of developing dementia.,True,NIH
+60,Regular physical activity helps reduce the risk of dementia.,True,NIH
+61,Eating a balanced diet and managing blood pressure can reduce dementia risk.,True,CDC
+62,Cognitive training and memory exercises can help slow dementia progression.,True,NIH
+63,"Alzheimer's disease currently has no cure, but treatments exist to slow progression.",True,NIH
+64,Sleep quality is linked to brain health and dementia risk.,True,Alzheimer’s Association
+65,"Alzheimer's disease currently has no cure, but treatments exist to slow progression.",True,Alzheimer’s Association
+66,Listening to music can improve the mood and behavior of people with dementia.,True,WHO
+67,Eating a balanced diet and managing blood pressure can reduce dementia risk.,True,PubMed
+68,Regular physical activity helps reduce the risk of dementia.,True,NIH
+69,Dementia risk increases with age.,True,NIH
+70,Social interaction reduces the likelihood of dementia-related decline.,True,PubMed
+71,"Alzheimer's disease currently has no cure, but treatments exist to slow progression.",True,Alzheimer’s Association
+72,Managing diabetes lowers the risk of developing dementia.,True,PubMed
+73,Sleep quality is linked to brain health and dementia risk.,True,Alzheimer’s Association
+74,"Alzheimer's disease currently has no cure, but treatments exist to slow progression.",True,Alzheimer’s Association
+75,Managing diabetes lowers the risk of developing dementia.,True,WHO
+76,Regular physical activity helps reduce the risk of dementia.,True,WHO
+77,Cognitive training and memory exercises can help slow dementia progression.,True,WHO
+78,Managing diabetes lowers the risk of developing dementia.,True,CDC
+79,"Alzheimer's disease currently has no cure, but treatments exist to slow progression.",True,Alzheimer’s Association
+80,"Alzheimer's disease currently has no cure, but treatments exist to slow progression.",True,PubMed
+81,"Alzheimer's disease currently has no cure, but treatments exist to slow progression.",True,CDC
+82,Early diagnosis of dementia allows better treatment planning.,True,PubMed
+83,Social interaction reduces the likelihood of dementia-related decline.,True,CDC
+84,Dementia risk increases with age.,True,Alzheimer’s Association
+85,Social interaction reduces the likelihood of dementia-related decline.,True,Alzheimer’s Association
+86,Sleep quality is linked to brain health and dementia risk.,True,PubMed
+87,Eating a balanced diet and managing blood pressure can reduce dementia risk.,True,WHO
+88,"Alzheimer's disease currently has no cure, but treatments exist to slow progression.",True,CDC
+89,Regular physical activity helps reduce the risk of dementia.,True,PubMed
+90,Sleep quality is linked to brain health and dementia risk.,True,CDC
+91,Social interaction reduces the likelihood of dementia-related decline.,True,CDC
+92,"Alzheimer's disease currently has no cure, but treatments exist to slow progression.",True,WHO
+93,Regular physical activity helps reduce the risk of dementia.,True,NIH
+94,Managing diabetes lowers the risk of developing dementia.,True,NIH
+95,Eating a balanced diet and managing blood pressure can reduce dementia risk.,True,Alzheimer’s Association
+96,Managing diabetes lowers the risk of developing dementia.,True,CDC
+97,Eating a balanced diet and managing blood pressure can reduce dementia risk.,True,CDC
+98,Listening to music can improve the mood and behavior of people with dementia.,True,WHO
+99,Managing diabetes lowers the risk of developing dementia.,True,Alzheimer’s Association
+100,Eating a balanced diet and managing blood pressure can reduce dementia risk.,True,NIH
+101,Managing diabetes lowers the risk of developing dementia.,True,Alzheimer’s Association
+102,"Alzheimer's disease currently has no cure, but treatments exist to slow progression.",True,Alzheimer’s Association
+103,"Alzheimer's disease currently has no cure, but treatments exist to slow progression.",True,NIH
+104,Social interaction reduces the likelihood of dementia-related decline.,True,NIH
+105,"Alzheimer's disease currently has no cure, but treatments exist to slow progression.",True,PubMed
+106,Cognitive training and memory exercises can help slow dementia progression.,True,Alzheimer’s Association
+107,Sleep quality is linked to brain health and dementia risk.,True,Alzheimer’s Association
+108,Sleep quality is linked to brain health and dementia risk.,True,NIH
+109,Listening to music can improve the mood and behavior of people with dementia.,True,Alzheimer’s Association
+110,Cognitive training and memory exercises can help slow dementia progression.,True,WHO
+111,Listening to music can improve the mood and behavior of people with dementia.,True,NIH
+112,Dementia risk increases with age.,True,PubMed
+113,Social interaction reduces the likelihood of dementia-related decline.,True,WHO
+114,Sleep quality is linked to brain health and dementia risk.,True,Alzheimer’s Association
+115,Early diagnosis of dementia allows better treatment planning.,True,NIH
+116,Managing diabetes lowers the risk of developing dementia.,True,WHO
+117,Eating a balanced diet and managing blood pressure can reduce dementia risk.,True,PubMed
+118,Managing diabetes lowers the risk of developing dementia.,True,CDC
+119,Managing diabetes lowers the risk of developing dementia.,True,CDC
+120,Early diagnosis of dementia allows better treatment planning.,True,CDC
+121,Cognitive training and memory exercises can help slow dementia progression.,True,NIH
+122,Cognitive training and memory exercises can help slow dementia progression.,True,Alzheimer’s Association
+123,Early diagnosis of dementia allows better treatment planning.,True,PubMed
+124,Early diagnosis of dementia allows better treatment planning.,True,Alzheimer’s Association
+125,Social interaction reduces the likelihood of dementia-related decline.,True,PubMed
+126,Regular physical activity helps reduce the risk of dementia.,True,PubMed
+127,Listening to music can improve the mood and behavior of people with dementia.,True,PubMed
+128,Early diagnosis of dementia allows better treatment planning.,True,WHO
+129,Sleep quality is linked to brain health and dementia risk.,True,Alzheimer’s Association
+130,Early diagnosis of dementia allows better treatment planning.,True,CDC
+131,Regular physical activity helps reduce the risk of dementia.,True,PubMed
+132,Managing diabetes lowers the risk of developing dementia.,True,WHO
+133,Dementia risk increases with age.,True,PubMed
+134,Cognitive training and memory exercises can help slow dementia progression.,True,PubMed
+135,Dementia risk increases with age.,True,PubMed
+136,Social interaction reduces the likelihood of dementia-related decline.,True,CDC
+137,Listening to music can improve the mood and behavior of people with dementia.,True,CDC
+138,Social interaction reduces the likelihood of dementia-related decline.,True,Alzheimer’s Association
+139,Early diagnosis of dementia allows better treatment planning.,True,Alzheimer’s Association
+140,Managing diabetes lowers the risk of developing dementia.,True,CDC
+141,Listening to music can improve the mood and behavior of people with dementia.,True,Alzheimer’s Association
+142,Social interaction reduces the likelihood of dementia-related decline.,True,PubMed
+143,Sleep quality is linked to brain health and dementia risk.,True,PubMed
+144,"Alzheimer's disease currently has no cure, but treatments exist to slow progression.",True,WHO
+145,Cognitive training and memory exercises can help slow dementia progression.,True,NIH
+146,Early diagnosis of dementia allows better treatment planning.,True,WHO
+147,Managing diabetes lowers the risk of developing dementia.,True,NIH
+148,Managing diabetes lowers the risk of developing dementia.,True,WHO
+149,"Alzheimer's disease currently has no cure, but treatments exist to slow progression.",True,PubMed
+150,Cognitive training and memory exercises can help slow dementia progression.,True,Alzheimer’s Association
+151,Cognitive training and memory exercises can help slow dementia progression.,True,CDC
+152,Regular physical activity helps reduce the risk of dementia.,True,CDC
+153,Regular physical activity helps reduce the risk of dementia.,True,NIH
+154,Listening to music can improve the mood and behavior of people with dementia.,True,PubMed
+155,Managing diabetes lowers the risk of developing dementia.,True,NIH
+156,Cognitive training and memory exercises can help slow dementia progression.,True,WHO
+157,Managing diabetes lowers the risk of developing dementia.,True,PubMed
+158,Cognitive training and memory exercises can help slow dementia progression.,True,Alzheimer’s Association
+159,"Alzheimer's disease currently has no cure, but treatments exist to slow progression.",True,PubMed
+160,Social interaction reduces the likelihood of dementia-related decline.,True,Alzheimer’s Association
+161,Early diagnosis of dementia allows better treatment planning.,True,CDC
+162,Listening to music can improve the mood and behavior of people with dementia.,True,NIH
+163,Early diagnosis of dementia allows better treatment planning.,True,PubMed
+164,Eating a balanced diet and managing blood pressure can reduce dementia risk.,True,NIH
+165,"Alzheimer's disease currently has no cure, but treatments exist to slow progression.",True,NIH
+166,Eating a balanced diet and managing blood pressure can reduce dementia risk.,True,NIH
+167,Cognitive training and memory exercises can help slow dementia progression.,True,Alzheimer’s Association
+168,Early diagnosis of dementia allows better treatment planning.,True,Alzheimer’s Association
+169,Sleep quality is linked to brain health and dementia risk.,True,NIH
+170,"Alzheimer's disease currently has no cure, but treatments exist to slow progression.",True,CDC
+171,Listening to music can improve the mood and behavior of people with dementia.,True,Alzheimer’s Association
+172,Social interaction reduces the likelihood of dementia-related decline.,True,PubMed
+173,Managing diabetes lowers the risk of developing dementia.,True,NIH
+174,Dementia risk increases with age.,True,CDC
+175,Regular physical activity helps reduce the risk of dementia.,True,PubMed
+176,Regular physical activity helps reduce the risk of dementia.,True,WHO
+177,"Alzheimer's disease currently has no cure, but treatments exist to slow progression.",True,PubMed
+178,Sleep quality is linked to brain health and dementia risk.,True,WHO
+179,Social interaction reduces the likelihood of dementia-related decline.,True,CDC
+180,Early diagnosis of dementia allows better treatment planning.,True,CDC
+181,Eating a balanced diet and managing blood pressure can reduce dementia risk.,True,PubMed
+182,Eating a balanced diet and managing blood pressure can reduce dementia risk.,True,NIH
+183,Managing diabetes lowers the risk of developing dementia.,True,Alzheimer’s Association
+184,Cognitive training and memory exercises can help slow dementia progression.,True,CDC
+185,Social interaction reduces the likelihood of dementia-related decline.,True,PubMed
+186,Managing diabetes lowers the risk of developing dementia.,True,NIH
+187,"Alzheimer's disease currently has no cure, but treatments exist to slow progression.",True,CDC
+188,Managing diabetes lowers the risk of developing dementia.,True,PubMed
+189,Sleep quality is linked to brain health and dementia risk.,True,NIH
+190,Listening to music can improve the mood and behavior of people with dementia.,True,PubMed
+191,Social interaction reduces the likelihood of dementia-related decline.,True,WHO
+192,Cognitive training and memory exercises can help slow dementia progression.,True,CDC
+193,Social interaction reduces the likelihood of dementia-related decline.,True,NIH
+194,Cognitive training and memory exercises can help slow dementia progression.,True,Alzheimer’s Association
+195,Managing diabetes lowers the risk of developing dementia.,True,PubMed
+196,Cognitive training and memory exercises can help slow dementia progression.,True,CDC
+197,Early diagnosis of dementia allows better treatment planning.,True,NIH
+198,Social interaction reduces the likelihood of dementia-related decline.,True,NIH
+199,Early diagnosis of dementia allows better treatment planning.,True,Alzheimer’s Association
+200,Regular physical activity helps reduce the risk of dementia.,True,Alzheimer’s Association
+201,Early diagnosis of dementia allows better treatment planning.,True,NIH
+202,Listening to music can improve the mood and behavior of people with dementia.,True,WHO
+203,Sleep quality is linked to brain health and dementia risk.,True,CDC
+204,Managing diabetes lowers the risk of developing dementia.,True,CDC
+205,Listening to music can improve the mood and behavior of people with dementia.,True,CDC
+206,Sleep quality is linked to brain health and dementia risk.,True,WHO
+207,Social interaction reduces the likelihood of dementia-related decline.,True,PubMed
+208,Managing diabetes lowers the risk of developing dementia.,True,CDC
+209,Eating a balanced diet and managing blood pressure can reduce dementia risk.,True,WHO
+210,Cognitive training and memory exercises can help slow dementia progression.,True,PubMed
+211,Regular physical activity helps reduce the risk of dementia.,True,Alzheimer’s Association
+212,Regular physical activity helps reduce the risk of dementia.,True,NIH
+213,Regular physical activity helps reduce the risk of dementia.,True,CDC
+214,Listening to music can improve the mood and behavior of people with dementia.,True,WHO
+215,Dementia risk increases with age.,True,PubMed
+216,Managing diabetes lowers the risk of developing dementia.,True,Alzheimer’s Association
+217,Social interaction reduces the likelihood of dementia-related decline.,True,PubMed
+218,Cognitive training and memory exercises can help slow dementia progression.,True,Alzheimer’s Association
+219,Sleep quality is linked to brain health and dementia risk.,True,WHO
+220,Regular physical activity helps reduce the risk of dementia.,True,NIH
+221,Social interaction reduces the likelihood of dementia-related decline.,True,PubMed
+222,Listening to music can improve the mood and behavior of people with dementia.,True,PubMed
+223,Early diagnosis of dementia allows better treatment planning.,True,NIH
+224,Listening to music can improve the mood and behavior of people with dementia.,True,NIH
+225,Cognitive training and memory exercises can help slow dementia progression.,True,NIH
+226,Managing diabetes lowers the risk of developing dementia.,True,CDC
+227,Cognitive training and memory exercises can help slow dementia progression.,True,WHO
+228,Early diagnosis of dementia allows better treatment planning.,True,CDC
+229,Early diagnosis of dementia allows better treatment planning.,True,NIH
+230,Eating a balanced diet and managing blood pressure can reduce dementia risk.,True,PubMed
+231,Early diagnosis of dementia allows better treatment planning.,True,CDC
+232,Managing diabetes lowers the risk of developing dementia.,True,Alzheimer’s Association
+233,Managing diabetes lowers the risk of developing dementia.,True,WHO
+234,Social interaction reduces the likelihood of dementia-related decline.,True,Alzheimer’s Association
+235,Dementia risk increases with age.,True,NIH
+236,Regular physical activity helps reduce the risk of dementia.,True,PubMed
+237,"Alzheimer's disease currently has no cure, but treatments exist to slow progression.",True,PubMed
+238,Listening to music can improve the mood and behavior of people with dementia.,True,NIH
+239,Regular physical activity helps reduce the risk of dementia.,True,CDC
+240,Regular physical activity helps reduce the risk of dementia.,True,Alzheimer’s Association
+241,Sleep quality is linked to brain health and dementia risk.,True,CDC
+242,Cognitive training and memory exercises can help slow dementia progression.,True,CDC
+243,Managing diabetes lowers the risk of developing dementia.,True,NIH
+244,"Alzheimer's disease currently has no cure, but treatments exist to slow progression.",True,WHO
+245,Early diagnosis of dementia allows better treatment planning.,True,CDC
+246,Eating a balanced diet and managing blood pressure can reduce dementia risk.,True,Alzheimer’s Association
+247,Early diagnosis of dementia allows better treatment planning.,True,Alzheimer’s Association
+248,Cognitive training and memory exercises can help slow dementia progression.,True,Alzheimer’s Association
+249,Managing diabetes lowers the risk of developing dementia.,True,PubMed
+250,Regular physical activity helps reduce the risk of dementia.,True,Alzheimer’s Association
+251,Drinking bleach can cleanse the brain of dementia.,Misinformation,Facebook Post
+252,Crystal healing cures Alzheimer’s disease.,Misinformation,Snopes (debunked)
+253,Drinking bleach can cleanse the brain of dementia.,Misinformation,Snopes (debunked)
+254,Drinking bleach can cleanse the brain of dementia.,Misinformation,FakeHealthNews
+255,Drinking bleach can cleanse the brain of dementia.,Misinformation,Facebook Post
+256,Drinking coconut oil cures dementia.,Misinformation,Random Blog
+257,Drinking bleach can cleanse the brain of dementia.,Misinformation,Snopes (debunked)
+258,Drinking coconut oil cures dementia.,Misinformation,Facebook Post
+259,Drinking coconut oil cures dementia.,Misinformation,Snopes (debunked)
+260,Drinking silver water daily reverses dementia symptoms.,Misinformation,Random Blog
+261,Vaccines increase the risk of dementia.,Misinformation,Snopes (debunked)
+262,Smoking marijuana cures Alzheimer’s disease.,Misinformation,Facebook Post
+263,Drinking silver water daily reverses dementia symptoms.,Misinformation,Unverified YouTube Video
+264,Drinking coconut oil cures dementia.,Misinformation,Random Blog
+265,Magnetic bracelets can prevent Alzheimer’s disease.,Misinformation,Unverified YouTube Video
+266,Drinking bleach can cleanse the brain of dementia.,Misinformation,Unverified YouTube Video
+267,Drinking silver water daily reverses dementia symptoms.,Misinformation,Facebook Post
+268,Magnetic bracelets can prevent Alzheimer’s disease.,Misinformation,Random Blog
+269,Smoking marijuana cures Alzheimer’s disease.,Misinformation,FakeHealthNews
+270,Magnetic bracelets can prevent Alzheimer’s disease.,Misinformation,Facebook Post
+271,Daily astrology readings improve dementia symptoms.,Misinformation,Snopes (debunked)
+272,Vaccines increase the risk of dementia.,Misinformation,Unverified YouTube Video
+273,Smoking marijuana cures Alzheimer’s disease.,Misinformation,FakeHealthNews
+274,Essential oils can reverse memory loss in dementia patients.,Misinformation,Facebook Post
+275,Essential oils can reverse memory loss in dementia patients.,Misinformation,Unverified YouTube Video
+276,Essential oils can reverse memory loss in dementia patients.,Misinformation,Snopes (debunked)
+277,Daily astrology readings improve dementia symptoms.,Misinformation,FakeHealthNews
+278,Drinking coconut oil cures dementia.,Misinformation,FakeHealthNews
+279,Essential oils can reverse memory loss in dementia patients.,Misinformation,FakeHealthNews
+280,Daily astrology readings improve dementia symptoms.,Misinformation,FakeHealthNews
+281,Vaccines increase the risk of dementia.,Misinformation,Random Blog
+282,Homeopathy can fully cure dementia.,Misinformation,Random Blog
+283,Magnetic bracelets can prevent Alzheimer’s disease.,Misinformation,Snopes (debunked)
+284,Drinking coconut oil cures dementia.,Misinformation,FakeHealthNews
+285,Essential oils can reverse memory loss in dementia patients.,Misinformation,FakeHealthNews
+286,Vaccines increase the risk of dementia.,Misinformation,Facebook Post
+287,Magnetic bracelets can prevent Alzheimer’s disease.,Misinformation,FakeHealthNews
+288,Drinking silver water daily reverses dementia symptoms.,Misinformation,FakeHealthNews
+289,Drinking bleach can cleanse the brain of dementia.,Misinformation,Snopes (debunked)
+290,Homeopathy can fully cure dementia.,Misinformation,Unverified YouTube Video
+291,Drinking silver water daily reverses dementia symptoms.,Misinformation,Unverified YouTube Video
+292,Homeopathy can fully cure dementia.,Misinformation,Unverified YouTube Video
+293,Magnetic bracelets can prevent Alzheimer’s disease.,Misinformation,FakeHealthNews
+294,Daily astrology readings improve dementia symptoms.,Misinformation,Random Blog
+295,Smoking marijuana cures Alzheimer’s disease.,Misinformation,Snopes (debunked)
+296,Homeopathy can fully cure dementia.,Misinformation,Facebook Post
+297,Crystal healing cures Alzheimer’s disease.,Misinformation,FakeHealthNews
+298,Drinking bleach can cleanse the brain of dementia.,Misinformation,Random Blog
+299,Daily astrology readings improve dementia symptoms.,Misinformation,FakeHealthNews
+300,Crystal healing cures Alzheimer’s disease.,Misinformation,Random Blog
+301,Smoking marijuana cures Alzheimer’s disease.,Misinformation,FakeHealthNews
+302,Drinking silver water daily reverses dementia symptoms.,Misinformation,Unverified YouTube Video
+303,Crystal healing cures Alzheimer’s disease.,Misinformation,Unverified YouTube Video
+304,Drinking coconut oil cures dementia.,Misinformation,Unverified YouTube Video
+305,Essential oils can reverse memory loss in dementia patients.,Misinformation,Random Blog
+306,Daily astrology readings improve dementia symptoms.,Misinformation,Facebook Post
+307,Homeopathy can fully cure dementia.,Misinformation,FakeHealthNews
+308,Crystal healing cures Alzheimer’s disease.,Misinformation,Random Blog
+309,Daily astrology readings improve dementia symptoms.,Misinformation,FakeHealthNews
+310,Vaccines increase the risk of dementia.,Misinformation,FakeHealthNews
+311,Crystal healing cures Alzheimer’s disease.,Misinformation,Facebook Post
+312,Drinking coconut oil cures dementia.,Misinformation,FakeHealthNews
+313,Smoking marijuana cures Alzheimer’s disease.,Misinformation,Random Blog
+314,Drinking coconut oil cures dementia.,Misinformation,Snopes (debunked)
+315,Smoking marijuana cures Alzheimer’s disease.,Misinformation,Snopes (debunked)
+316,Vaccines increase the risk of dementia.,Misinformation,FakeHealthNews
+317,Vaccines increase the risk of dementia.,Misinformation,Snopes (debunked)
+318,Vaccines increase the risk of dementia.,Misinformation,Facebook Post
+319,Crystal healing cures Alzheimer’s disease.,Misinformation,Facebook Post
+320,Vaccines increase the risk of dementia.,Misinformation,FakeHealthNews
+321,Vaccines increase the risk of dementia.,Misinformation,Snopes (debunked)
+322,Drinking silver water daily reverses dementia symptoms.,Misinformation,Random Blog
+323,Smoking marijuana cures Alzheimer’s disease.,Misinformation,Facebook Post
+324,Crystal healing cures Alzheimer’s disease.,Misinformation,Random Blog
+325,Vaccines increase the risk of dementia.,Misinformation,Random Blog
+326,Daily astrology readings improve dementia symptoms.,Misinformation,Unverified YouTube Video
+327,Drinking silver water daily reverses dementia symptoms.,Misinformation,Random Blog
+328,Vaccines increase the risk of dementia.,Misinformation,FakeHealthNews
+329,Drinking bleach can cleanse the brain of dementia.,Misinformation,Facebook Post
+330,Vaccines increase the risk of dementia.,Misinformation,Random Blog
+331,Vaccines increase the risk of dementia.,Misinformation,FakeHealthNews
+332,Drinking bleach can cleanse the brain of dementia.,Misinformation,Unverified YouTube Video
+333,Vaccines increase the risk of dementia.,Misinformation,Facebook Post
+334,Drinking coconut oil cures dementia.,Misinformation,FakeHealthNews
+335,Vaccines increase the risk of dementia.,Misinformation,FakeHealthNews
+336,Drinking bleach can cleanse the brain of dementia.,Misinformation,Random Blog
+337,Smoking marijuana cures Alzheimer’s disease.,Misinformation,Random Blog
+338,Drinking bleach can cleanse the brain of dementia.,Misinformation,Unverified YouTube Video
+339,Smoking marijuana cures Alzheimer’s disease.,Misinformation,Facebook Post
+340,Drinking bleach can cleanse the brain of dementia.,Misinformation,Unverified YouTube Video
+341,Crystal healing cures Alzheimer’s disease.,Misinformation,Random Blog
+342,Drinking bleach can cleanse the brain of dementia.,Misinformation,Random Blog
+343,Essential oils can reverse memory loss in dementia patients.,Misinformation,Snopes (debunked)
+344,Smoking marijuana cures Alzheimer’s disease.,Misinformation,Unverified YouTube Video
+345,Drinking coconut oil cures dementia.,Misinformation,Snopes (debunked)
+346,Drinking bleach can cleanse the brain of dementia.,Misinformation,Facebook Post
+347,Vaccines increase the risk of dementia.,Misinformation,Unverified YouTube Video
+348,Vaccines increase the risk of dementia.,Misinformation,Facebook Post
+349,Drinking silver water daily reverses dementia symptoms.,Misinformation,Facebook Post
+350,Smoking marijuana cures Alzheimer’s disease.,Misinformation,Random Blog
+351,Magnetic bracelets can prevent Alzheimer’s disease.,Misinformation,FakeHealthNews
+352,Smoking marijuana cures Alzheimer’s disease.,Misinformation,Random Blog
+353,Daily astrology readings improve dementia symptoms.,Misinformation,Facebook Post
+354,Drinking coconut oil cures dementia.,Misinformation,Random Blog
+355,Daily astrology readings improve dementia symptoms.,Misinformation,Random Blog
+356,Drinking bleach can cleanse the brain of dementia.,Misinformation,Snopes (debunked)
+357,Essential oils can reverse memory loss in dementia patients.,Misinformation,Facebook Post
+358,Smoking marijuana cures Alzheimer’s disease.,Misinformation,Snopes (debunked)
+359,Vaccines increase the risk of dementia.,Misinformation,Unverified YouTube Video
+360,Drinking coconut oil cures dementia.,Misinformation,Snopes (debunked)
+361,Smoking marijuana cures Alzheimer’s disease.,Misinformation,Facebook Post
+362,Magnetic bracelets can prevent Alzheimer’s disease.,Misinformation,Random Blog
+363,Essential oils can reverse memory loss in dementia patients.,Misinformation,FakeHealthNews
+364,Daily astrology readings improve dementia symptoms.,Misinformation,Snopes (debunked)
+365,Daily astrology readings improve dementia symptoms.,Misinformation,Random Blog
+366,Smoking marijuana cures Alzheimer’s disease.,Misinformation,Unverified YouTube Video
+367,Drinking coconut oil cures dementia.,Misinformation,FakeHealthNews
+368,Drinking coconut oil cures dementia.,Misinformation,FakeHealthNews
+369,Daily astrology readings improve dementia symptoms.,Misinformation,FakeHealthNews
+370,Magnetic bracelets can prevent Alzheimer’s disease.,Misinformation,Facebook Post
+371,Magnetic bracelets can prevent Alzheimer’s disease.,Misinformation,Snopes (debunked)
+372,Smoking marijuana cures Alzheimer’s disease.,Misinformation,Random Blog
+373,Drinking silver water daily reverses dementia symptoms.,Misinformation,Unverified YouTube Video
+374,Magnetic bracelets can prevent Alzheimer’s disease.,Misinformation,FakeHealthNews
+375,Drinking bleach can cleanse the brain of dementia.,Misinformation,FakeHealthNews
+376,Drinking bleach can cleanse the brain of dementia.,Misinformation,FakeHealthNews
+377,Daily astrology readings improve dementia symptoms.,Misinformation,FakeHealthNews
+378,Drinking silver water daily reverses dementia symptoms.,Misinformation,Unverified YouTube Video
+379,Drinking coconut oil cures dementia.,Misinformation,Snopes (debunked)
+380,Homeopathy can fully cure dementia.,Misinformation,FakeHealthNews
+381,Magnetic bracelets can prevent Alzheimer’s disease.,Misinformation,FakeHealthNews
+382,Homeopathy can fully cure dementia.,Misinformation,Facebook Post
+383,Drinking bleach can cleanse the brain of dementia.,Misinformation,FakeHealthNews
+384,Drinking silver water daily reverses dementia symptoms.,Misinformation,Snopes (debunked)
+385,Daily astrology readings improve dementia symptoms.,Misinformation,Unverified YouTube Video
+386,Crystal healing cures Alzheimer’s disease.,Misinformation,Snopes (debunked)
+387,Smoking marijuana cures Alzheimer’s disease.,Misinformation,Unverified YouTube Video
+388,Essential oils can reverse memory loss in dementia patients.,Misinformation,Facebook Post
+389,Essential oils can reverse memory loss in dementia patients.,Misinformation,FakeHealthNews
+390,Crystal healing cures Alzheimer’s disease.,Misinformation,Unverified YouTube Video
+391,Vaccines increase the risk of dementia.,Misinformation,FakeHealthNews
+392,Magnetic bracelets can prevent Alzheimer’s disease.,Misinformation,Random Blog
+393,Crystal healing cures Alzheimer’s disease.,Misinformation,Random Blog
+394,Drinking silver water daily reverses dementia symptoms.,Misinformation,FakeHealthNews
+395,Drinking coconut oil cures dementia.,Misinformation,Snopes (debunked)
+396,Smoking marijuana cures Alzheimer’s disease.,Misinformation,Unverified YouTube Video
+397,Drinking silver water daily reverses dementia symptoms.,Misinformation,Snopes (debunked)
+398,Smoking marijuana cures Alzheimer’s disease.,Misinformation,Random Blog
+399,Smoking marijuana cures Alzheimer’s disease.,Misinformation,Unverified YouTube Video
+400,Crystal healing cures Alzheimer’s disease.,Misinformation,Facebook Post
+401,Essential oils can reverse memory loss in dementia patients.,Misinformation,Random Blog
+402,Crystal healing cures Alzheimer’s disease.,Misinformation,Random Blog
+403,Magnetic bracelets can prevent Alzheimer’s disease.,Misinformation,FakeHealthNews
+404,Magnetic bracelets can prevent Alzheimer’s disease.,Misinformation,Random Blog
+405,Essential oils can reverse memory loss in dementia patients.,Misinformation,FakeHealthNews
+406,Drinking silver water daily reverses dementia symptoms.,Misinformation,Random Blog
+407,Crystal healing cures Alzheimer’s disease.,Misinformation,Unverified YouTube Video
+408,Vaccines increase the risk of dementia.,Misinformation,Snopes (debunked)
+409,Vaccines increase the risk of dementia.,Misinformation,Snopes (debunked)
+410,Drinking coconut oil cures dementia.,Misinformation,Unverified YouTube Video
+411,Vaccines increase the risk of dementia.,Misinformation,FakeHealthNews
+412,Homeopathy can fully cure dementia.,Misinformation,Random Blog
+413,Crystal healing cures Alzheimer’s disease.,Misinformation,Facebook Post
+414,Magnetic bracelets can prevent Alzheimer’s disease.,Misinformation,Random Blog
+415,Drinking silver water daily reverses dementia symptoms.,Misinformation,Unverified YouTube Video
+416,Daily astrology readings improve dementia symptoms.,Misinformation,Random Blog
+417,Essential oils can reverse memory loss in dementia patients.,Misinformation,FakeHealthNews
+418,Smoking marijuana cures Alzheimer’s disease.,Misinformation,Facebook Post
+419,Essential oils can reverse memory loss in dementia patients.,Misinformation,Random Blog
+420,Drinking bleach can cleanse the brain of dementia.,Misinformation,Unverified YouTube Video
+421,Homeopathy can fully cure dementia.,Misinformation,FakeHealthNews
+422,Daily astrology readings improve dementia symptoms.,Misinformation,Facebook Post
+423,Magnetic bracelets can prevent Alzheimer’s disease.,Misinformation,Facebook Post
+424,Smoking marijuana cures Alzheimer’s disease.,Misinformation,Facebook Post
+425,Vaccines increase the risk of dementia.,Misinformation,FakeHealthNews
+426,Drinking silver water daily reverses dementia symptoms.,Misinformation,Facebook Post
+427,Drinking silver water daily reverses dementia symptoms.,Misinformation,Random Blog
+428,Drinking coconut oil cures dementia.,Misinformation,Facebook Post
+429,Homeopathy can fully cure dementia.,Misinformation,FakeHealthNews
+430,Crystal healing cures Alzheimer’s disease.,Misinformation,Unverified YouTube Video
+431,Crystal healing cures Alzheimer’s disease.,Misinformation,FakeHealthNews
+432,Daily astrology readings improve dementia symptoms.,Misinformation,Facebook Post
+433,Daily astrology readings improve dementia symptoms.,Misinformation,Snopes (debunked)
+434,Homeopathy can fully cure dementia.,Misinformation,Unverified YouTube Video
+435,Drinking coconut oil cures dementia.,Misinformation,Random Blog
+436,Drinking bleach can cleanse the brain of dementia.,Misinformation,FakeHealthNews
+437,Drinking silver water daily reverses dementia symptoms.,Misinformation,Facebook Post
+438,Smoking marijuana cures Alzheimer’s disease.,Misinformation,Unverified YouTube Video
+439,Drinking bleach can cleanse the brain of dementia.,Misinformation,FakeHealthNews
+440,Essential oils can reverse memory loss in dementia patients.,Misinformation,Unverified YouTube Video
+441,Homeopathy can fully cure dementia.,Misinformation,FakeHealthNews
+442,Essential oils can reverse memory loss in dementia patients.,Misinformation,FakeHealthNews
+443,Vaccines increase the risk of dementia.,Misinformation,Facebook Post
+444,Homeopathy can fully cure dementia.,Misinformation,Snopes (debunked)
+445,Smoking marijuana cures Alzheimer’s disease.,Misinformation,Random Blog
+446,Smoking marijuana cures Alzheimer’s disease.,Misinformation,Unverified YouTube Video
+447,Drinking coconut oil cures dementia.,Misinformation,Random Blog
+448,Essential oils can reverse memory loss in dementia patients.,Misinformation,Facebook Post
+449,Homeopathy can fully cure dementia.,Misinformation,Random Blog
+450,Daily astrology readings improve dementia symptoms.,Misinformation,Snopes (debunked)
+451,Drinking coconut oil cures dementia.,Misinformation,Unverified YouTube Video
+452,Drinking bleach can cleanse the brain of dementia.,Misinformation,Facebook Post
+453,Drinking bleach can cleanse the brain of dementia.,Misinformation,Random Blog
+454,Smoking marijuana cures Alzheimer’s disease.,Misinformation,Facebook Post
+455,Smoking marijuana cures Alzheimer’s disease.,Misinformation,Random Blog
+456,Drinking silver water daily reverses dementia symptoms.,Misinformation,Facebook Post
+457,Smoking marijuana cures Alzheimer’s disease.,Misinformation,FakeHealthNews
+458,Essential oils can reverse memory loss in dementia patients.,Misinformation,Random Blog
+459,Homeopathy can fully cure dementia.,Misinformation,Unverified YouTube Video
+460,Drinking coconut oil cures dementia.,Misinformation,FakeHealthNews
+461,Homeopathy can fully cure dementia.,Misinformation,Unverified YouTube Video
+462,Magnetic bracelets can prevent Alzheimer’s disease.,Misinformation,Unverified YouTube Video
+463,Smoking marijuana cures Alzheimer’s disease.,Misinformation,FakeHealthNews
+464,Essential oils can reverse memory loss in dementia patients.,Misinformation,FakeHealthNews
+465,Drinking coconut oil cures dementia.,Misinformation,Unverified YouTube Video
+466,Vaccines increase the risk of dementia.,Misinformation,Random Blog
+467,Drinking coconut oil cures dementia.,Misinformation,Random Blog
+468,Crystal healing cures Alzheimer’s disease.,Misinformation,Random Blog
+469,Smoking marijuana cures Alzheimer’s disease.,Misinformation,Snopes (debunked)
+470,Vaccines increase the risk of dementia.,Misinformation,Snopes (debunked)
+471,Daily astrology readings improve dementia symptoms.,Misinformation,Snopes (debunked)
+472,Drinking bleach can cleanse the brain of dementia.,Misinformation,Snopes (debunked)
+473,Crystal healing cures Alzheimer’s disease.,Misinformation,FakeHealthNews
+474,Magnetic bracelets can prevent Alzheimer’s disease.,Misinformation,Facebook Post
+475,Drinking coconut oil cures dementia.,Misinformation,Unverified YouTube Video
+476,Vaccines increase the risk of dementia.,Misinformation,Snopes (debunked)
+477,Vaccines increase the risk of dementia.,Misinformation,FakeHealthNews
+478,Magnetic bracelets can prevent Alzheimer’s disease.,Misinformation,Snopes (debunked)
+479,Essential oils can reverse memory loss in dementia patients.,Misinformation,Random Blog
+480,Drinking coconut oil cures dementia.,Misinformation,Random Blog
+481,Magnetic bracelets can prevent Alzheimer’s disease.,Misinformation,FakeHealthNews
+482,Drinking silver water daily reverses dementia symptoms.,Misinformation,Snopes (debunked)
+483,Smoking marijuana cures Alzheimer’s disease.,Misinformation,Snopes (debunked)
+484,Daily astrology readings improve dementia symptoms.,Misinformation,Unverified YouTube Video
+485,Crystal healing cures Alzheimer’s disease.,Misinformation,FakeHealthNews
+486,Drinking coconut oil cures dementia.,Misinformation,Random Blog
+487,Smoking marijuana cures Alzheimer’s disease.,Misinformation,Snopes (debunked)
+488,Homeopathy can fully cure dementia.,Misinformation,FakeHealthNews
+489,Smoking marijuana cures Alzheimer’s disease.,Misinformation,Random Blog
+490,Essential oils can reverse memory loss in dementia patients.,Misinformation,Facebook Post
+491,Drinking coconut oil cures dementia.,Misinformation,Random Blog
+492,Drinking coconut oil cures dementia.,Misinformation,Unverified YouTube Video
+493,Magnetic bracelets can prevent Alzheimer’s disease.,Misinformation,Facebook Post
+494,Homeopathy can fully cure dementia.,Misinformation,Random Blog
+495,Vaccines increase the risk of dementia.,Misinformation,Unverified YouTube Video
+496,Drinking silver water daily reverses dementia symptoms.,Misinformation,Snopes (debunked)
+497,Magnetic bracelets can prevent Alzheimer’s disease.,Misinformation,Unverified YouTube Video
+498,Drinking coconut oil cures dementia.,Misinformation,FakeHealthNews
+499,Smoking marijuana cures Alzheimer’s disease.,Misinformation,FakeHealthNews
+500,Drinking silver water daily reverses dementia symptoms.,Misinformation,Snopes (debunked)
+501,Vaccines increase the risk of dementia.,Misinformation,Facebook Post
+502,Magnetic bracelets can prevent Alzheimer’s disease.,Misinformation,Snopes (debunked)
+503,Drinking bleach can cleanse the brain of dementia.,Misinformation,Random Blog
+504,Daily astrology readings improve dementia symptoms.,Misinformation,Facebook Post
+505,Drinking silver water daily reverses dementia symptoms.,Misinformation,Unverified YouTube Video
+506,Magnetic bracelets can prevent Alzheimer’s disease.,Misinformation,FakeHealthNews
+507,Drinking silver water daily reverses dementia symptoms.,Misinformation,Unverified YouTube Video
+508,Magnetic bracelets can prevent Alzheimer’s disease.,Misinformation,Random Blog
+509,Magnetic bracelets can prevent Alzheimer’s disease.,Misinformation,Facebook Post
+510,Drinking coconut oil cures dementia.,Misinformation,Snopes (debunked)
+511,Magnetic bracelets can prevent Alzheimer’s disease.,Misinformation,Snopes (debunked)
+512,Drinking silver water daily reverses dementia symptoms.,Misinformation,Snopes (debunked)
+513,Magnetic bracelets can prevent Alzheimer’s disease.,Misinformation,FakeHealthNews
+514,Smoking marijuana cures Alzheimer’s disease.,Misinformation,Random Blog
+515,Crystal healing cures Alzheimer’s disease.,Misinformation,Unverified YouTube Video
+516,Essential oils can reverse memory loss in dementia patients.,Misinformation,Facebook Post
+517,Essential oils can reverse memory loss in dementia patients.,Misinformation,Unverified YouTube Video
+518,Smoking marijuana cures Alzheimer’s disease.,Misinformation,FakeHealthNews
+519,Magnetic bracelets can prevent Alzheimer’s disease.,Misinformation,Unverified YouTube Video
+520,Daily astrology readings improve dementia symptoms.,Misinformation,Random Blog

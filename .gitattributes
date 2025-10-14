@@ -1,0 +1,2 @@
+*.safetensors filter=lfs diff=lfs merge=lfs -text
+results/checkpoint-*/model.* filter=lfs diff=lfs merge=lfs -text
